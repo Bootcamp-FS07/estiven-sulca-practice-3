@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Player</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-image-container">
+        <img
+          src="/assets/icons/x-sign.svg"
+          class="header-image"
+          alt="X Signal"
+        />
+      </div>
+      <div class="header-image-container">
+        <img
+          src="/assets/icons/circle-sign.svg"
+          class="header-image"
+          alt="Circle Signal"
+        />
+      </div>
+    </header>
+    <section class="main-section">
+      <h1>
+        TIC <span class="red-text">TAC</span> <span class="blue-text">TOE</span>
+      </h1>
+
+      <form id="playForm" class="play-form">
+        <label class="label-text" for="player1">Player 1</label>
+        <input
+          type="text"
+          id="player1"
+          name="player1"
+          required
+          placeholder="Name"
+          class="input-field"
+        />
+
+        <label class="label-text" for="player2">Player 2</label>
+        <input
+          type="text"
+          id="player2"
+          name="player2"
+          required
+          placeholder="Name"
+          class="input-field"
+        />
+
+        <label class="label-text" for="player2">Set the grid size</label>
+        <input
+          type="text"
+          id="player2"
+          name="player2"
+          required
+          placeholder="Name"
+          class="input-field"
+        />
+        <a class="main-button" href="board.html">play</a>
+
+        <!-- <button class="main-button" type="submit">Play</button> -->
+      </form>
+    </section>
+    <footer>
+      <div class="footer-image-container">
+        <img src="../assets/icons/x-group-row.svg" alt="X row" />
+      </div>
+      <div class="footer-image-container">
+        <img src="../assets/icons/o-group-row.svg" alt="O row" />
+      </div>
+    </footer>
+  </body>
+</html>

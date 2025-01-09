@@ -21,3 +21,51 @@ Create a tic tac toe game
 Update the README file to include detailed instructions for running the project and a complete list of the tools used.
 
 **Deadline: Thursday, January 9th 2024.**
+
+### Project Composition
+The project is composed of the following:
+
+#### 1. HTML
+index.html: The homepage where players input their names and select the grid size for the game.
+pages/player.html: View to set up the player names and size of the grid.
+pages/board.html: The game board page where the game is played.
+#### 2. CSS
+The project includes styling for different elements such as the game board, buttons, modals, and the input form.
+####  3. JavaScript
+- Main (main.js): Initialize the game, drawing the components.
+- Game Logic (game.js): Handles the core functionality of the game. This includes creating the board, checking scores, and handling tie situations.
+- UI (ui.js): Manages the user interface. It handles creating the game board, displaying player names, updating the score, and showing the winner/tie modal.
+- Local Storage (storage.js): Stores player names, grid size, and game scores persistently in the browser.
+- Modal (modal.js): Handles all the logic to show the modal.
+#### 4. Assets
+Icons and images are used for the signs ('X' and 'O'), and buttons within the app.
+
+### Features
+Player Name Input: Players can input their names before starting the game.
+Grid Size: Players can select the grid size for the game (minimum grid size is 3).
+Score Tracking: Tracks the score of Player 1, Player 2, and the number of ties.
+Winner and Tie Detection: After each round, the game will display a modal with the winner or a tie message.
+Game Reset: Players can reset the game for a rematch.
+Home Button: Players can return to the homepage from the modal.
+### How to Run Locally
+To run this project locally, follow the steps below:
+
+#### Prerequisites
+Make sure you have a web browser installed (Google Chrome, Firefox, Safari, etc.)..
+
+#### Steps
+Clone the repository (or download the files):
+
+```bash
+git clone https://github.com/Bootcamp-FS07/estiven-sulca-practice-3
+```
+Navigate to the project directory:
+
+```bash
+cd estiven-sulca-practice-3
+```
+Open the index.html file in your browser:
+
+Double-click the index.html file, or right-click and open with your browser.
+Play the Game.
+

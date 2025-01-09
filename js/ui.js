@@ -4,7 +4,7 @@ let signs = {
 };
 class UI {
   static #currentPlayer = "x";
-  static #boardSize = localStorage.getItem("gridSize");
+  static #boardSize;
   static #gameOver = false;
 
   static #player1Score = parseInt(localStorage.getItem("player1Score")) || 0;

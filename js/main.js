@@ -1,4 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const game = new Game(3);
+  const game = new Game();
   UI.createBoard(game.size);
 });

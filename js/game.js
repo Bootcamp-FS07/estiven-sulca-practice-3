@@ -28,6 +28,13 @@ class Game {
     );
   }
 
+  static checkDraw() {
+    const cells = Array.from(document.querySelectorAll(".cell"));
+    const allFilled = cells.every((cell) => cell.getAttribute("cell") !== null);
+
+    return allFilled;
+  }
+
   static #checkRows(board, size, winLength) {
     for (let row = 0; row < size; row++) {
       let count = 1;

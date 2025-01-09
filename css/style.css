@@ -147,7 +147,11 @@ footer {
     align-items: center;
     background-color: white;
 }
-
+.cell img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
 .row:last-child {
     border-bottom: none;
 }
@@ -162,7 +166,7 @@ footer {
     justify-content: space-between;
     align-items: end;
     text-align: center;
-    gap: 5px;
+    gap: 20px;
 }
 .section-score h4 {
     font-size: 18px;

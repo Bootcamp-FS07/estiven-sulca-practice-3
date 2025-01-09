@@ -4,13 +4,24 @@ let signs = {
 };
 class UI {
   static #currentPlayer = "x";
-  static #boardSize = 0;
+  static #boardSize = localStorage.getItem("gridSize");
   static #gameOver = false;
+
+  static #player1Score = parseInt(localStorage.getItem("player1Score")) || 0;
+  static #player2Score = parseInt(localStorage.getItem("player2Score")) || 0;
+  static #tieScore = parseInt(localStorage.getItem("tieScore")) || 0;
 
   static createBoard(size) {
     this.#boardSize = size;
     const boardElement = document.querySelector("#board");
+
+    document.getElementById("player1").textContent =
+      localStorage.getItem("player1");
+    document.getElementById("player2").textContent =
+      localStorage.getItem("player2");
     boardElement.innerHTML = "";
+
+    UI.#updateScoreboard();
     this.#gameOver = false;
 
     for (let row = 0; row < size; row++) {
@@ -45,7 +56,14 @@ class UI {
     if (winner) {
       UI.#gameOver = true;
       let text = this.#currentPlayer === "x" ? "Player 1" : "Player 2";
+
+      if (this.#currentPlayer === "x") {
+        UI.#player1Score++;
+      } else {
+        UI.#player2Score++;
+      }
       setTimeout(() => {
+        UI.#updateScoreboard();
         UI.#showModal(text, "Wins!!!");
       }, 2000);
       return;
@@ -54,7 +72,9 @@ class UI {
     if (tie) {
       UI.#gameOver = true;
 
+      UI.#tieScore++;
       setTimeout(() => {
+        UI.#updateScoreboard();
         UI.#showModal("Tie", "No ones wins");
       }, 2000);
       return;
@@ -73,4 +93,13 @@ class UI {
     modal.style.display = "block";
   }
 
+  static #updateScoreboard() {
+    document.getElementById("player1Score").textContent = UI.#player1Score;
+    document.getElementById("player2Score").textContent = UI.#player2Score;
+    document.getElementById("playerTie").textContent = UI.#tieScore;
+
+    localStorage.setItem("player1Score", UI.#player1Score);
+    localStorage.setItem("player2Score", UI.#player2Score);
+    localStorage.setItem("tieScore", UI.#tieScore);
+  }
 }

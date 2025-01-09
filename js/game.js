@@ -1,6 +1,6 @@
 class Game {
   constructor(size = 3) {
-    this.size = size;
+    this.size = localStorage.getItem("gridSize");
     this.board = this.createBoard();
   }
 

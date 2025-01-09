@@ -22,7 +22,7 @@
         Tic <span class="blue-text">Tac</span> <span class="red-text">Toe</span>
       </h4>
       <a href="/index.html">
-        <button class="icon-button">
+        <button class="icon-button" onclick="clearLocalStorage()">
           <span class="icon"><b>X</b></span>
         </button>
       </a>
@@ -32,16 +32,20 @@
     </section>
     <section class="section-score">
       <div>
-        <h5><span class="blue-text">Player 1: User 1111111111</span></h5>
-        <h4><span class="blue-text">04</span></h4>
+        <h5>
+          <span class="blue-text">Player 1: <span id="player1"></span></span>
+        </h5>
+        <h4 id="player1Score" class="blue-text">0</h4>
       </div>
       <div>
         <h5><b>Tie</b></h5>
-        <h4><b>2</b></h4>
+        <h4 id="playerTie"><b>0</b></h4>
       </div>
       <div>
-        <h5><span class="red-text">Player 2: User 2222222222</span></h5>
-        <h4><span class="red-text">10</span></h4>
+        <h5>
+          <span class="red-text">Player 2: <span id="player2"></span> </span>
+        </h5>
+        <h4 id="player2Score" class="red-text">0</h4>
       </div>
     </section>
 
@@ -51,7 +55,11 @@
         <h2 id="modalDescription"></h2>
         <div class="button-modal-container">
           <a href="/index.html">
-            <button id="homeButton" class="icon-button-modal">
+            <button
+              id="homeButton"
+              class="icon-button-modal"
+              onclick="clearLocalStorage()"
+            >
               <img src="../assets/icons/home-icon.svg" alt="home" />
             </button>
           </a>

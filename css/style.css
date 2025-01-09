@@ -240,4 +240,7 @@ footer {
         max-height: 550px;
         
     }
+    .modal-content {
+        top: 30%;
+    }
 }
